@@ -16,5 +16,16 @@ namespace RiimutTest
 
             Assert.Equal(runes, result);
         }
+
+        [Fact]
+        public void Transforms_Younger_Futhark_To_Letters()
+        {
+            string runes = "ᚠᚢᚦᚬᚱᚴᚼᚽᚾᚿᛁᛅᛆᛋᛌᛏᛐᛒᛘᛚᛦ:";
+            string letters ="fuþorkhhnniaassttbmlR ";
+
+            string result = YoungerFuthark.RunesToLetters(runes);
+
+            Assert.Equal(letters, result);
+        }
     }
 }

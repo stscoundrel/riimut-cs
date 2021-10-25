@@ -5,7 +5,7 @@ namespace Riimut.Mappings
 {
     public class YoungerFutharkMapping
     {
-        public static Dictionary<string, string> GetRunesToLettersDictionary()
+        public static Dictionary<string, string> GetLettersToRunesDictionary()
         {
             return new Dictionary<string, string>()
             {
@@ -50,7 +50,36 @@ namespace Riimut.Mappings
                 {"ø", "ᚢ"},
                 {"ǫ", "ᚢ"},
                 {" ", ":"},
-        };
+            };
+        }
+
+        public static Dictionary<string, string> GetRunesToLettersDictionary()
+        {
+            return new Dictionary<string, string>()
+            {
+                {"ᚠ", "f"},
+                {"ᚢ", "u"},
+                {"ᚦ", "þ"},
+                {"ᚬ", "o"},
+                {"ᚱ", "r"},
+                {"ᚴ", "k"},
+                {"ᚼ", "h"},
+                {"ᚽ", "h"},
+                {"ᚾ", "n"},
+                {"ᚿ", "n"},
+                {"ᛁ", "i"},
+                {"ᛅ", "a"},
+                {"ᛆ", "a"},
+                {"ᛋ", "s"},
+                {"ᛌ", "s"},
+                {"ᛏ", "t"},
+                {"ᛐ", "t"},
+                {"ᛒ", "b"},
+                {"ᛘ", "m"},
+                {"ᛚ", "l"},
+                {"ᛦ", "R"},
+                {":", " "},
+            };
+        }
     }
-}
 }
