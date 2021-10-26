@@ -48,7 +48,7 @@ Runes to text:
 ```csharp
 
 // All four dialects contain RunesToLetters method.
-usuing Riimut;
+using Riimut;
 
 string runicText = "ᛅᚢᚴ:ᛏᛅᚾᛁ:ᚴᛅᚱᚦᛁ:ᚴᚱᛁᛋᛏᚾᛅ";
 string latinText = YoungerFuthark.RunesToLetters(runicText);
