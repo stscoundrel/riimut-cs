@@ -14,4 +14,4 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet }}
           include-prerelease: true
-      - run: dotnet test
+      - run: dotnet test tests
