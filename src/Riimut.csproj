@@ -5,6 +5,15 @@
     <PackageId>Riimut</PackageId>
     <Version>1.0.0</Version>
     <Authors>stscoundrel / Sampo Silvennoinen</Authors>
+    <Description>
+      Transform latin letters to runes and vice versa.
+      Includes all four major runic alphabets.
+    </Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 
 </Project>
