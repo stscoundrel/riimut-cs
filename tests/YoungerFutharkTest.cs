@@ -33,7 +33,7 @@ namespace RiimutTest
         public void Transforms_Runes_To_Letters()
         {
             string runes = "ᚠᚢᚦᚬᚱᚴᚼᚽᚾᚿᛁᛅᛆᛋᛌᛏᛐᛒᛘᛚᛦ:";
-            string letters ="fuþorkhhnniaassttbmlR ";
+            string letters = "fuþorkhhnniaassttbmlR ";
 
             string result = YoungerFuthark.RunesToLetters(runes);
 
@@ -45,7 +45,7 @@ namespace RiimutTest
         {
             // From Old Groms runestone.
             string runes = "ᛅᚢᚴ:ᛏᛅᚾᛁ:ᚴᛅᚱᚦᛁ:ᚴᚱᛁᛋᛏᚾᛅ";
-            string letters ="auk tani karþi kristna";
+            string letters = "auk tani karþi kristna";
 
             string result = YoungerFuthark.RunesToLetters(runes);
 

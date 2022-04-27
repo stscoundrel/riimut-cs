@@ -12,11 +12,15 @@ namespace Riimut
         {
             StringBuilder result = new StringBuilder();
 
-            foreach (char letter in content) {
+            foreach (char letter in content)
+            {
                 string part = Char.ToLower(letter).ToString();
-                if (dictionary.ContainsKey(part)) {
+                if (dictionary.ContainsKey(part))
+                {
                     result.Append(dictionary[part]);
-                } else {
+                }
+                else
+                {
                     result.Append(part);
                 }
             }
