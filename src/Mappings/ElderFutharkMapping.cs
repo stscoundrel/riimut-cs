@@ -3,11 +3,10 @@ using System.Collections.Generic;
 
 namespace Riimut.Mappings
 {
-    public class ElderFutharkMapping
+    internal class ElderFutharkMapping
     {
-        public static Dictionary<string, string> GetLettersToRunesDictionary()
-        {
-            return new Dictionary<string, string>()
+
+        private readonly static Dictionary<string, string> LettersToRunesMapping = new Dictionary<string, string>()
             {
                 {"a", "ᚨ"},
                 {"á", "ᚨ"},
@@ -52,11 +51,8 @@ namespace Riimut.Mappings
                 {"þ", "ᚦ"},
                 {" ", ":"},
             };
-        }
 
-        public static Dictionary<string, string> GetRunesToLettersDictionary()
-        {
-            return new Dictionary<string, string>()
+        private readonly static Dictionary<string, string> RunesToLettersMapping = new Dictionary<string, string>()
             {
                 {"ᚠ", "f"},
                 {"ᚢ", "u"},
@@ -87,6 +83,14 @@ namespace Riimut.Mappings
                 {"ᛞ", "d"},
                 {":", " "},
             };
+        public static Dictionary<string, string> GetLettersToRunesDictionary()
+        {
+            return LettersToRunesMapping;
+        }
+
+        public static Dictionary<string, string> GetRunesToLettersDictionary()
+        {
+            return RunesToLettersMapping;
         }
     }
 }
