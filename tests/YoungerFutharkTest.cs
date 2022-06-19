@@ -7,7 +7,7 @@ namespace RiimutTest
     public class YoungerFutharkTests
     {
         [Fact]
-        public void Transforms_Letters_To_Younger_Futhark()
+        public void TransformsLettersToYoungerFuthark()
         {
             string letters = "aábcdðeéfghiíjklmnoópqrstþuúvwxyýzåäæöøǫþ";
             string runes = "ᛅᛅᛒᛋᛏᚦᛁᛁᚠᚴᚼᛁᛁᛁᚴᛚᛘᚾᚢᚢᛒᚴᚱᛋᛏᚦᚢᚢᚢᚢᛋᚢᚢᛋᚢᛅᛅᚢᚢᚢᚦ";
@@ -19,7 +19,7 @@ namespace RiimutTest
         }
 
         [Fact]
-        public void Transforms_Text_Content_To_Younger_Futhark()
+        public void TransformsTextContentToYoungerFuthark()
         {
             // From Old Groms runestone.
             string letters = "auk tani karþi kristna";
@@ -32,7 +32,7 @@ namespace RiimutTest
         }
 
         [Fact]
-        public void Transforms_Runes_To_Letters()
+        public void TransformsRunesToLetters()
         {
             string runes = "ᚠᚢᚦᚬᚱᚴᚼᚽᚾᚿᛁᛅᛆᛋᛌᛏᛐᛒᛘᛚᛦ:";
             string letters = "fuþorkhhnniaassttbmlR ";
@@ -44,7 +44,7 @@ namespace RiimutTest
         }
 
         [Fact]
-        public void Transforms_Rune_Content_To_Latin_Letters()
+        public void TransformsRuneContentToLatinLetters()
         {
             // From Old Groms runestone.
             string runes = "ᛅᚢᚴ:ᛏᛅᚾᛁ:ᚴᛅᚱᚦᛁ:ᚴᚱᛁᛋᛏᚾᛅ";

@@ -7,7 +7,7 @@ namespace RiimutTest
     public class ElderFutharkTests
     {
         [Fact]
-        public void Transforms_Letters_To_Elder_Futhark()
+        public void TransformsLettersToElderFuthark()
         {
             string letters = "aábcdðeéfghiíjklmnŋoópqrstþuúvwxyýzåäæöøǫþ";
             string runes = "ᚨᚨᛒᚲᛞᚦᛖᛖᚠᚷᚻᛁᛁᛃᚲᛚᛗᚾᛜᛟᛟᛈᚲᚱᛋᛏᚦᚢᚢᚹᚹᛋᛁᛁᛉᛟᛇᛇᚢᚢᛟᚦ";
@@ -19,7 +19,7 @@ namespace RiimutTest
         }
 
         [Fact]
-        public void Transforms_Runes_To_Letters()
+        public void TransformsRunesToLetters()
         {
             string runes = "ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚻᚾᛁᛃᛇᛈᛉᛊᛋᛏᛒᛖᛗᛚᛜᛝᛟᛞ:";
             string letters = "fuþarkgwhhnijïpzsstbemlŋŋod ";
@@ -31,7 +31,7 @@ namespace RiimutTest
         }
 
         [Fact]
-        public void Transforms_Text_Content_To_Elder_Futhark()
+        public void TransformsTextContentToElderFuthark()
         {
             // From 4th century axe in Jutland
             string letters = "wagagastiz alu wihgu sikijaz aiþalataz";
@@ -44,7 +44,7 @@ namespace RiimutTest
         }
 
         [Fact]
-        public void Transforms_Elder_Futhark_Content_To_Text()
+        public void TransformsElderFutharkContentToText()
         {
             // From 4th century axe in Jutland
             string runes = "ᚹᚨᚷᚨᚷᚨᛋᛏᛁᛉ:ᚨᛚᚢ:ᚹᛁᚻᚷᚢ:ᛋᛁᚲᛁᛃᚨᛉ:ᚨᛁᚦᚨᛚᚨᛏᚨᛉ";
