@@ -12,7 +12,8 @@ namespace RiimutTest
             string letters = "aábcdðeéfghiíjklmnoóǫpqrstuúvwxyýzåäæœöøþ ";
             string runes = "ᛆᛆᛒᚴᚦᚦᚽᚽᚠᚵᚼᛁᛁᛁᚴᛚᛘᚿᚮᚮᚰᛕᚴᚱᛋᛏᚢᚢᚠᚠᛋᛦᛦᛋᚮᛅᛅᚯᚯᚯᚦ:";
 
-            string result = MedievalFuthork.LettersToRunes(letters);
+            Dialect medievalFuthork = new MedievalFuthork();
+            string result = medievalFuthork.LettersToRunes(letters);
 
             Assert.Equal(runes, result);
         }
@@ -23,7 +24,8 @@ namespace RiimutTest
             string runes = "ᚠᚢᚦᚮᚱᚴᚼᚿᛁᛆᛌᛋᛐᛏᛒᛘᛚᛦᚯᛅᚰᛕᚽ:";
             string letters = "fuþorkhniassttbmlyøæǫᴘe ";
 
-            string result = MedievalFuthork.RunesToLetters(runes);
+            Dialect medievalFuthork = new MedievalFuthork();
+            string result = medievalFuthork.RunesToLetters(runes);
 
             Assert.Equal(letters, result);
         }
@@ -34,7 +36,8 @@ namespace RiimutTest
             string letters = "Faðer uor som ast i himlüm, halgað warðe þit nama";
             string runes = "ᚠᛆᚦᚽᚱ:ᚢᚮᚱ:ᛋᚮᛘ:ᛆᛋᛏ:ᛁ:ᚼᛁᛘᛚᚢᛘ,:ᚼᛆᛚᚵᛆᚦ:ᚠᛆᚱᚦᚽ:ᚦᛁᛏ:ᚿᛆᛘᛆ";
 
-            string result = MedievalFuthork.LettersToRunes(letters);
+            Dialect medievalFuthork = new MedievalFuthork();
+            string result = medievalFuthork.LettersToRunes(letters);
 
             Assert.Equal(runes, result);
         }
@@ -45,7 +48,8 @@ namespace RiimutTest
             string runes = "ᚠᛆᚦᚽᚱ:ᚢᚮᚱ:ᛋᚮᛘ:ᛆᛋᛏ:ᛁ:ᚼᛁᛘᛚᚢᛘ:ᚼᛆᛚᚵᛆᚦ:ᚠᛆᚱᚦᚽ:ᚦᛁᛏ:ᚿᛆᛘᛆ";
             string letters = "faþer uor som ast i himlum halgaþ farþe þit nama"; // Wont tell apart eth & thorn in mid sentence.
 
-            string result = MedievalFuthork.LettersToRunes(letters);
+            Dialect medievalFuthork = new MedievalFuthork();
+            string result = medievalFuthork.LettersToRunes(letters);
 
             Assert.Equal(runes, result);
         }

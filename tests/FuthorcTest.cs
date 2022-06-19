@@ -12,7 +12,8 @@ namespace RiimutTest
             string letters = "aábcdðeéfghiíïʒjklmnŋoóǫpqrstuúvwxyýzåäæœöøþ ";
             string runes = "ᚪᚪᛒᚳᛞᛞᛖᛖᚠᚷᚻᛁᛇᛇᛇᛡᚳᛚᛗᚾᛝᚩᚩᚩᛈᚳᚱᛋᛏᚢᚢᚹᚹᛉᚣᚣᛉᚩᚫᚫᛟᛟᛟᚦ:";
 
-            string result = Futhorc.LettersToRunes(letters);
+            Dialect futhorc = new Futhorc();
+            string result = futhorc.LettersToRunes(letters);
 
             Assert.Equal(runes, result);
         }
@@ -23,7 +24,8 @@ namespace RiimutTest
             string runes = "ᚠᚢᚦᚩᚱᚳᚷᚹᚻᚾᛁᛡᛄᛇᛈᛉᛋᚴᛏᛒᛖᛗᛚᛝᛟᛞᚪᚫᚣᛠ:";
             string letters = "fuþorcgwhnijjïpxsstbemlŋœdaæyea ";
 
-            string result = Futhorc.RunesToLetters(runes);
+            Dialect futhorc = new Futhorc();
+            string result = futhorc.RunesToLetters(runes);
 
             Assert.Equal(letters, result);
         }
@@ -35,7 +37,8 @@ namespace RiimutTest
             string letters = "fisc.flodu.ahofonferg | enberig |";
             string runes = "ᚠᛁᛋᚳ.ᚠᛚᚩᛞᚢ.ᚪᚻᚩᚠᚩᚾᚠᛖᚱᚷ:|:ᛖᚾᛒᛖᚱᛁᚷ:|";
 
-            string result = Futhorc.LettersToRunes(letters);
+            Dialect futhorc = new Futhorc();
+            string result = futhorc.LettersToRunes(letters);
 
             Assert.Equal(runes, result);
         }
@@ -47,7 +50,8 @@ namespace RiimutTest
             string runes = "ᚠᛁᛋᚳ.ᚠᛚᚩᛞᚢ.ᚪᚻᚩᚠᚩᚾᚠᛖᚱᚷ:|:ᛖᚾᛒᛖᚱᛁᚷ:|";
             string letters = "fisc.flodu.ahofonferg | enberig |";
 
-            string result = Futhorc.RunesToLetters(runes);
+            Dialect futhorc = new Futhorc();
+            string result = futhorc.RunesToLetters(runes);
 
             Assert.Equal(letters, result);
         }

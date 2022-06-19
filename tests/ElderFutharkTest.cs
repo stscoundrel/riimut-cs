@@ -12,7 +12,8 @@ namespace RiimutTest
             string letters = "aábcdðeéfghiíjklmnŋoópqrstþuúvwxyýzåäæöøǫþ";
             string runes = "ᚨᚨᛒᚲᛞᚦᛖᛖᚠᚷᚻᛁᛁᛃᚲᛚᛗᚾᛜᛟᛟᛈᚲᚱᛋᛏᚦᚢᚢᚹᚹᛋᛁᛁᛉᛟᛇᛇᚢᚢᛟᚦ";
 
-            string result = ElderFuthark.LettersToRunes(letters);
+            Dialect elderFuthark = new ElderFuthark();
+            string result = elderFuthark.LettersToRunes(letters);
 
             Assert.Equal(runes, result);
         }
@@ -23,7 +24,8 @@ namespace RiimutTest
             string runes = "ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚻᚾᛁᛃᛇᛈᛉᛊᛋᛏᛒᛖᛗᛚᛜᛝᛟᛞ:";
             string letters = "fuþarkgwhhnijïpzsstbemlŋŋod ";
 
-            string result = ElderFuthark.RunesToLetters(runes);
+            Dialect elderFuthark = new ElderFuthark();
+            string result = elderFuthark.RunesToLetters(runes);
 
             Assert.Equal(letters, result);
         }
@@ -35,7 +37,8 @@ namespace RiimutTest
             string letters = "wagagastiz alu wihgu sikijaz aiþalataz";
             string runes = "ᚹᚨᚷᚨᚷᚨᛋᛏᛁᛉ:ᚨᛚᚢ:ᚹᛁᚻᚷᚢ:ᛋᛁᚲᛁᛃᚨᛉ:ᚨᛁᚦᚨᛚᚨᛏᚨᛉ";
 
-            string result = ElderFuthark.LettersToRunes(letters);
+            Dialect elderFuthark = new ElderFuthark();
+            string result = elderFuthark.LettersToRunes(letters);
 
             Assert.Equal(runes, result);
         }
@@ -47,7 +50,8 @@ namespace RiimutTest
             string runes = "ᚹᚨᚷᚨᚷᚨᛋᛏᛁᛉ:ᚨᛚᚢ:ᚹᛁᚻᚷᚢ:ᛋᛁᚲᛁᛃᚨᛉ:ᚨᛁᚦᚨᛚᚨᛏᚨᛉ";
             string letters = "wagagastiz alu wihgu sikijaz aiþalataz";
 
-            string result = ElderFuthark.RunesToLetters(runes);
+            Dialect elderFuthark = new ElderFuthark();
+            string result = elderFuthark.RunesToLetters(runes);
 
             Assert.Equal(letters, result);
         }
