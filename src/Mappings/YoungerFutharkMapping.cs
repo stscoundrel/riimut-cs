@@ -5,7 +5,7 @@ namespace Riimut.Mappings
 {
     internal class YoungerFutharkMapping
     {
-        private readonly static Dictionary<string, string> LettersToRunesMapping = new Dictionary<string, string>()
+        private readonly static Dictionary<string, string> LettersToLongBranchRunesMapping = new Dictionary<string, string>()
             {
                 {"a", "ᛅ"},
                 {"á", "ᛅ"},
@@ -50,6 +50,52 @@ namespace Riimut.Mappings
                 {" ", ":"},
             };
 
+
+        private readonly static Dictionary<string, string> LettersToShortTwigRunesMapping = new Dictionary<string, string>()
+            {
+                {"a", "ᛆ"},
+                {"á", "ᛆ"},
+                {"b", "ᛒ"},
+                {"c", "ᛌ"},
+                {"d", "ᛐ"},
+                {"ð", "ᚦ"},
+                {"e", "ᛁ"},
+                {"é", "ᛁ"},
+                {"f", "ᚠ"},
+                {"g", "ᚴ"},
+                {"h", "ᚽ"},
+                {"i", "ᛁ"},
+                {"í", "ᛁ"},
+                {"j", "ᛁ"},
+                {"k", "ᚴ"},
+                {"l", "ᛚ"},
+                {"m", "ᛘ"},
+                {"n", "ᚿ"},
+                {"o", "ᚢ"},
+                {"ó", "ᚢ"},
+                {"p", "ᛒ"},
+                {"q", "ᚴ"},
+                {"r", "ᚱ"},
+                {"s", "ᛌ"},
+                {"t", "ᛐ"},
+                {"þ", "ᚦ"},
+                {"u", "ᚢ"},
+                {"ú", "ᚢ"},
+                {"v", "ᚢ"},
+                {"w", "ᚢ"},
+                {"x", "ᛌ"},
+                {"y", "ᚢ"},
+                {"ý", "ᚢ"},
+                {"z", "ᛌ"},
+                {"å", "ᚢ"},
+                {"ä", "ᛆ"},
+                {"æ", "ᛆ"},
+                {"ö", "ᚢ"},
+                {"ø", "ᚢ"},
+                {"ǫ", "ᚢ"},
+                {" ", ":"},
+            };
+
         private readonly static Dictionary<string, string> RunesToLettersMapping = new Dictionary<string, string>()
             {
                 {"ᚠ", "f"},
@@ -75,9 +121,14 @@ namespace Riimut.Mappings
                 {"ᛦ", "R"},
                 {":", " "},
             };
-        public static Dictionary<string, string> GetLettersToRunesDictionary()
+        public static Dictionary<string, string> GetLettersToLongBranchRunesDictionary()
         {
-            return LettersToRunesMapping;
+            return LettersToLongBranchRunesMapping;
+        }
+
+        public static Dictionary<string, string> GetLettersToShortTwigRunesDictionary()
+        {
+            return LettersToShortTwigRunesMapping;
         }
 
         public static Dictionary<string, string> GetRunesToLettersDictionary()

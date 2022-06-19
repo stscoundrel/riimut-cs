@@ -58,6 +58,34 @@ Console.WriteLine(latinText); // "auk tani karþi kristna"
 ```
 
 
+Rune variants in Younger Futhark:
+
+Younger Futhark comes with long branch (Danish) and short twig (Norwegian & Swedish) variants.
+```csharp
+
+using Riimut;
+
+string letters = "aábcdðeéfghiíjklmnoópqrstþuúvwxyýzåäæöøǫþ";
+YoungerFuthark youngerFuthark = new YoungerFuthark();
+
+// Comes with named methods per style.
+string longBranch = youngerFuthark.LettersToLongBranchRunes(letters);
+string shortTwig = youngerFuthark.LettersToShortTwigRunes(letters);
+
+Console.WriteLine(longBranch); // ᛅᛅᛒᛋᛏᚦᛁᛁᚠᚴᚼᛁᛁᛁᚴᛚᛘᚾᚢᚢᛒᚴᚱᛋᛏᚦᚢᚢᚢᚢᛋᚢᚢᛋᚢᛅᛅᚢᚢᚢᚦ"
+Console.WriteLine(shortTwig); // ᛆᛆᛒᛌᛐᚦᛁᛁᚠᚴᚽᛁᛁᛁᚴᛚᛘᚿᚢᚢᛒᚴᚱᛌᛐᚦᚢᚢᚢᚢᛌᚢᚢᛌᚢᛆᛆᚢᚢᚢᚦ
+
+// Instance can also be created with default style. Then LettersToRunes will use that style.
+YoungerFuthark youngerFutharkLongBranch = new YoungerFuthark(YoungerFuthark.Variant.LongBranch);
+YoungerFuthark youngerFutharkShortTwig = new YoungerFuthark(YoungerFuthark.Variant.LongBranch);
+
+// Or you can switch the style of instance at will.
+youngerFutharkLongBranch.EnableShortTwig();
+youngerFutharkShortTwig.EnableLongBranch();
+
+```
+
+
 #### What's in the name?
 
 "Riimut" is the Finnish word for "runes".
