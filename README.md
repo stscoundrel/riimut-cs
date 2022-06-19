@@ -24,23 +24,27 @@ using Riimut;
 
 // From Old Groms runestone.
 string content = "auk tani karþi kristna";
-string youngerFuthark = YoungerFuthark.LettersToRunes(content);
-Console.WriteLine(youngerFuthark); // ᛅᚢᚴ:ᛏᛅᚾᛁ:ᚴᛅᚱᚦᛁ:ᚴᚱᛁᛋᛏᚾᛅ
+Dialect youngerFuthark = new YoungerFuthark();
+string result = youngerFuthark.LettersToRunes(content);
+Console.WriteLine(result); // ᛅᚢᚴ:ᛏᛅᚾᛁ:ᚴᛅᚱᚦᛁ:ᚴᚱᛁᛋᛏᚾᛅ
 
 // From 4th century axe in Jutland
 string content = "wagagastiz alu wihgu sikijaz aiþalataz";
-string elderFuthark = ElderFuthark.LettersToRunes(content);
-Console.WriteLine(elderFuthark); // ᚹᚨᚷᚨᚷᚨᛋᛏᛁᛉ:ᚨᛚᚢ:ᚹᛁᚻᚷᚢ:ᛋᛁᚲᛁᛃᚨᛉ:ᚨᛁᚦᚨᛚᚨᛏᚨᛉ
+Dialect elderFuthark = new ElderFuthark();
+string result = elderFuthark.LettersToRunes(content);
+Console.WriteLine(result); // ᚹᚨᚷᚨᚷᚨᛋᛏᛁᛉ:ᚨᛚᚢ:ᚹᛁᚻᚷᚢ:ᛋᛁᚲᛁᛃᚨᛉ:ᚨᛁᚦᚨᛚᚨᛏᚨᛉ
 
 // From Lord's Prayer, in Old Norse.
 string content = "Faðer uor som ast i himlüm, halgað warðe þit nama";
-string medievalFuthork = MedievalFuthork.LettersToRunes(content);
-Console.WriteLine(medievalFuthork); // ᚠᛆᚦᚽᚱ:ᚢᚮᚱ:ᛋᚮᛘ:ᛆᛋᛏ:ᛁ:ᚼᛁᛘᛚᚢᛘ,:ᚼᛆᛚᚵᛆᚦ:ᚠᛆᚱᚦᚽ:ᚦᛁᛏ:ᚿᛆᛘᛆ
+Dialect medievalFuthork = new MedievalFuthork();
+string result = MedievalFuthork.LettersToRunes(content);
+Console.WriteLine(result); // ᚠᛆᚦᚽᚱ:ᚢᚮᚱ:ᛋᚮᛘ:ᛆᛋᛏ:ᛁ:ᚼᛁᛘᛚᚢᛘ,:ᚼᛆᛚᚵᛆᚦ:ᚠᛆᚱᚦᚽ:ᚦᛁᛏ:ᚿᛆᛘᛆ
 
 // From 8th century Franks Casket, in late West Saxon.
 string content = "fisc.flodu.ahofonferg | enberig |";
-string futhorc = Futhorc.LettersToRunes(content);
-Console.WriteLine(futhorc); // ᚠᛁᛋᚳ.ᚠᛚᚩᛞᚢ.ᚪᚻᚩᚠᚩᚾᚠᛖᚱᚷ:|:ᛖᚾᛒᛖᚱᛁᚷ:|
+Dialect futhorc = new Futhorc();
+string result = futhorc.LettersToRunes(content);
+Console.WriteLine(result); // ᚠᛁᛋᚳ.ᚠᛚᚩᛞᚢ.ᚪᚻᚩᚠᚩᚾᚠᛖᚱᚷ:|:ᛖᚾᛒᛖᚱᛁᚷ:|
 
 ```
 
@@ -51,7 +55,8 @@ Runes to text:
 using Riimut;
 
 string runicText = "ᛅᚢᚴ:ᛏᛅᚾᛁ:ᚴᛅᚱᚦᛁ:ᚴᚱᛁᛋᛏᚾᛅ";
-string latinText = YoungerFuthark.RunesToLetters(runicText);
+Dialect youngerFuthark = new YoungerFuthark();
+string latinText = youngerFuthark.RunesToLetters(runicText);
 
 Console.WriteLine(latinText); // "auk tani karþi kristna"
 
