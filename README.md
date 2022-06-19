@@ -82,7 +82,7 @@ Console.WriteLine(shortTwig); // ᛆᛆᛒᛌᛐᚦᛁᛁᚠᚴᚽᛁᛁᛁᚴ�
 
 // Instance can also be created with default style. Then LettersToRunes will use that style.
 YoungerFuthark youngerFutharkLongBranch = new YoungerFuthark(YoungerFuthark.Variant.LongBranch);
-YoungerFuthark youngerFutharkShortTwig = new YoungerFuthark(YoungerFuthark.Variant.LongBranch);
+YoungerFuthark youngerFutharkShortTwig = new YoungerFuthark(YoungerFuthark.Variant.ShortTwig);
 
 // Or you can switch the style of instance at will.
 youngerFutharkLongBranch.EnableShortTwig();
