@@ -14,14 +14,17 @@ namespace Riimut
 
             foreach (char letter in content)
             {
-                string part = Char.ToLower(letter).ToString();
-                if (dictionary.ContainsKey(part))
+                string unmodified = letter.ToString();
+                string lower = Char.ToLower(letter).ToString();
+                if (dictionary.ContainsKey(unmodified))
                 {
-                    result.Append(dictionary[part]);
+                    result.Append(dictionary[unmodified]);
                 }
+                else if (dictionary.ContainsKey(lower))
+                    result.Append(dictionary[lower]);
                 else
                 {
-                    result.Append(part);
+                    result.Append(unmodified);
                 }
             }
 

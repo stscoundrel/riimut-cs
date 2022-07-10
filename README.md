@@ -2,12 +2,13 @@
 
 Transform latin letters to runes &amp; vice versa. C# version.
 
-Includes transformers for four main runic alphabets:
+Includes transformers for five main runic alphabets:
 
 - Elder Futhark
 - Younger Futhark
 - Medieval Futhork
 - Futhorc (Anglo-Frisian runes)
+- Staveless Futhark
 
 ### Install
 
@@ -45,6 +46,12 @@ string content = "fisc.flodu.ahofonferg | enberig |";
 Dialect futhorc = new Futhorc();
 string result = futhorc.LettersToRunes(content);
 Console.WriteLine(result); // ᚠᛁᛋᚳ.ᚠᛚᚩᛞᚢ.ᚪᚻᚩᚠᚩᚾᚠᛖᚱᚷ:|:ᛖᚾᛒᛖᚱᛁᚷ:|
+
+// From Old Norse text in Hög runestone.
+string content = "kuþniutr þru sun lit rita stin þina ak bru kirþi aftiʀ bruþr sina asbiurn ak at kuþlaf";
+Dialect staveless = new StavelessFuthark();
+string result = staveless.LettersToRunes(content);
+Console.WriteLine(result); // ᛍ╮ו⸜ᛁ╮⸍◟:ו◟╮:╵╮⸜:⸌ᛁ⸍:◟ᛁ⸍⸝:╵⸍ᛁ⸜:וᛁ⸜⸝:⸝ᛍ:ˏ◟╮:ᛍᛁ◟וᛁ:⸝ᛙ⸍ᛁʀ:ˏ◟╮ו◟:╵ᛁ⸜⸝:⸝╵ˏᛁ╮◟⸜:⸝ᛍ:⸝⸍:ᛍ╮ו⸌⸝ᛙ
 
 ```
 
