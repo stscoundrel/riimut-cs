@@ -9,7 +9,7 @@ namespace RiimutTest
         public void TransformsLettersToStavelessFuthark()
         {
             string letters = "aábcdðeéfghiíjklmnoópqrRstþuúvwxyýzåäæöøǫþ ";
-            string runes = "⸝⸝ˏ╵⸍וᛁᛁᛙᛍᚽᛁᛁᛁᛍ⸌⠃⸜ˎˎˏᛍ◟◟╵⸍ו╮╮╮╮╵╮╮╵ˎ⸝⸝ˎˎˎו:";
+            string runes = "⸝⸝ˏ╵⸍וᛁᛁᛙᛍᚽᛁᛁᛁᛍ⸌⠃⸜ˎˎˏᛍ◟⡄╵⸍ו╮╮╮╮╵╮╮╵ˎ⸝⸝ˎˎˎו:";
 
             Dialect StavelessFuthark = new StavelessFuthark();
             string result = StavelessFuthark.LettersToRunes(letters);
