@@ -9,8 +9,8 @@ namespace RiimutTest
         [Fact]
         public void TransformsLettersToElderFuthark()
         {
-            string letters = "aábcdðeéfghiíjklmnŋoópqrstþuúvwxyýzåäæöøǫþ";
-            string runes = "ᚨᚨᛒᚲᛞᚦᛖᛖᚠᚷᚻᛁᛁᛃᚲᛚᛗᚾᛜᛟᛟᛈᚲᚱᛋᛏᚦᚢᚢᚹᚹᛋᛁᛁᛉᛟᛇᛇᚢᚢᛟᚦ";
+            string letters = "aábcdðeéfghiíjklmnŋoópqrstþuúvwxyýzåäæœöøǫþ";
+            string runes = "ᚨᚨᛒᚲᛞᚦᛖᛖᚠᚷᚻᛁᛁᛃᚲᛚᛗᚾᛜᛟᛟᛈᚲᚱᛋᛏᚦᚢᚢᚹᚹᛋᛁᛁᛉᛟᛇᛇᛟᚢᚢᛟᚦ";
 
             Dialect elderFuthark = new ElderFuthark();
             string result = elderFuthark.LettersToRunes(letters);
