@@ -9,8 +9,8 @@ namespace RiimutTest
         [Fact]
         public void DefaultLetterTransform()
         {
-            string letters = "aábcdðeéfghiíjklmnoópqrstþuúvwxyýzåäæöøǫþ";
-            string runes = "ᛅᛅᛒᛋᛏᚦᛁᛁᚠᚴᚼᛁᛁᛁᚴᛚᛘᚾᚢᚢᛒᚴᚱᛋᛏᚦᚢᚢᚢᚢᛋᚢᚢᛋᚢᛅᛅᚢᚢᚢᚦ";
+            string letters = "aábcdðeéfghiíjklmnoópqrstþuúvwxyýzåäæœöøǫþ";
+            string runes = "ᛅᛅᛒᛋᛏᚦᛁᛁᚠᚴᚼᛁᛁᛁᚴᛚᛘᚾᚢᚢᛒᚴᚱᛋᛏᚦᚢᚢᚢᚢᛋᚢᚢᛋᚢᛅᛅᚢᚢᚢᚢᚦ";
 
             YoungerFuthark youngerFuthark = new YoungerFuthark();
             string result = youngerFuthark.LettersToRunes(letters);
@@ -21,8 +21,8 @@ namespace RiimutTest
         [Fact]
         public void TransformsLettersToLongBranchRunes()
         {
-            string letters = "aábcdðeéfghiíjklmnoópqrstþuúvwxyýzåäæöøǫþ";
-            string runes = "ᛅᛅᛒᛋᛏᚦᛁᛁᚠᚴᚼᛁᛁᛁᚴᛚᛘᚾᚢᚢᛒᚴᚱᛋᛏᚦᚢᚢᚢᚢᛋᚢᚢᛋᚢᛅᛅᚢᚢᚢᚦ";
+            string letters = "aábcdðeéfghiíjklmnoópqrstþuúvwxyýzåäæœöøǫþ";
+            string runes = "ᛅᛅᛒᛋᛏᚦᛁᛁᚠᚴᚼᛁᛁᛁᚴᛚᛘᚾᚢᚢᛒᚴᚱᛋᛏᚦᚢᚢᚢᚢᛋᚢᚢᛋᚢᛅᛅᚢᚢᚢᚢᚦ";
 
             YoungerFuthark youngerFuthark = new YoungerFuthark();
             string result = youngerFuthark.LettersToLongBranchRunes(letters);
@@ -33,8 +33,8 @@ namespace RiimutTest
         [Fact]
         public void TransformsLettersToShortTwigRunes()
         {
-            string letters = "aábcdðeéfghiíjklmnoópqrstþuúvwxyýzåäæöøǫþ";
-            string runes = "ᛆᛆᛒᛌᛐᚦᛁᛁᚠᚴᚽᛁᛁᛁᚴᛚᛘᚿᚢᚢᛒᚴᚱᛌᛐᚦᚢᚢᚢᚢᛌᚢᚢᛌᚢᛆᛆᚢᚢᚢᚦ";
+            string letters = "aábcdðeéfghiíjklmnoópqrstþuúvwxyýzåäæœöøǫþ";
+            string runes = "ᛆᛆᛒᛌᛐᚦᛁᛁᚠᚴᚽᛁᛁᛁᚴᛚᛘᚿᚢᚢᛒᚴᚱᛌᛐᚦᚢᚢᚢᚢᛌᚢᚢᛌᚢᛆᛆᚢᚢᚢᚢᚦ";
 
             YoungerFuthark youngerFuthark = new YoungerFuthark();
             string result = youngerFuthark.LettersToShortTwigRunes(letters);

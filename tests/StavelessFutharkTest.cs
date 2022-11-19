@@ -8,8 +8,8 @@ namespace RiimutTest
         [Fact]
         public void TransformsLettersToStavelessFuthark()
         {
-            string letters = "aábcdðeéfghiíjklmnoópqrRstþuúvwxyýzåäæöøǫþ ";
-            string runes = "⸝⸝ˏ╵⸍וᛁᛁᛙᛍᚽᛁᛁᛁᛍ⸌⠃⸜ˎˎˏᛍ◟⡄╵⸍ו╮╮╮╮╵╮╮╵ˎ⸝⸝ˎˎˎו:";
+            string letters = "aábcdðeéfghiíjklmnoópqrRstþuúvwxyýzåäæœöøǫþ ";
+            string runes = "⸝⸝ˏ╵⸍וᛁᛁᛙᛍᚽᛁᛁᛁᛍ⸌⠃⸜ˎˎˏᛍ◟⡄╵⸍ו╮╮╮╮╵╮╮╵ˎ⸝⸝ˎˎˎˎו:";
 
             Dialect StavelessFuthark = new StavelessFuthark();
             string result = StavelessFuthark.LettersToRunes(letters);
